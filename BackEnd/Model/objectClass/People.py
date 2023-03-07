@@ -1,17 +1,16 @@
-from typing import Optional
 from pydantic import BaseModel
 from datetime import datetime
 
 class People(BaseModel):
-    idPeople = Optional(int)
-    name = str
-    surname = str
-    classm = str
-    cf = str
-    gender = str
-    email = str 
-    birthday = str
-    sub = str
+    idPeople : int
+    name : str
+    surname : str
+    classm : str
+    cf : str
+    gender : str
+    email : str 
+    birthday : str
+    sub : str
 
     def __init__(self, idPeople, name, surname, classm, cf, gender, email, birthday, sub):
         self.idPeople = idPeople
