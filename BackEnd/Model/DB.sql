@@ -56,6 +56,5 @@ CREATE TABLE IF NOT EXISTS Entries(
     IdIng INT PRIMARY KEY AUTO_INCREMENT,
     DataIn DATETIME NOT NULL,
     DataOut DATETIME,
-    IdAccount INT NOT NULL,
-    FOREIGN KEY(IdAccount) REFERENCES Account(IdAccount)
+    IdAccount INT NOT NULL REFERENCES Account(IdAccount)
 );
