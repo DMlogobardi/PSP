@@ -1,30 +1,43 @@
 {# login.html #}
 {% extends 'basePage.html' %}
+
+{% block links %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/sha256.js"></script>
+<script src="{{url_for('static', path='js/loginPage2.js')}}"></script>
+
+{% endblock links %}
+
 {% block bodyOfPage %}
-<div class="p-2 mb-3 bg-dark text-white">
-  <div class="row">
-    <div class="col">
-    </div>
-    <div class="col-6">
-      <p class="fs-2">LOGIN</p>
-      <form>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Indirizzo email</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  placeholder="name@example.com">
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
-        </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Controllo</label>
-        </div>
-        <button type="submit" class="btn btn-primary">INVIA</button>
-      </form>
-    </div>    
-    <div class="col">
-    </div>
+<div class="p-3 mb-2 bg-dark text-white">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+      </div>
+      <div class="col-6">
+        <p class="fs-2">LOGIN</p>
+        <form>
+          <div class="mb-3">
+            <label for="InputNickname" class="form-label" >Nickname</label>
+            <input type="Nickname" class="form-control" id="nicknameInput" aria-describedby="NicknameHelp"  placeholder="Insert Nickname" required>
+          </div>
+          <div class="mb-3">
+            <label for="InputPassword1" class="form-label" >Password</label>
+            <input type="password" class="form-control" id="passwordInput" required>
+          </div>
+          <div class="mb-3 form-check">
+            <input type="button" onclick="showPwd()" value="&#128065">
+            <a href="./qr">Recupera la password</a>
+          </div>
+          <button type="button" class="btn btn-primary" onclick="control();">INVIA</button>
+        </form>
+      </div>    
+        <div class="col">
+      </div>
     </div>
   </div>
+</div>
+
+
+
 {% endblock bodyOfPage %}

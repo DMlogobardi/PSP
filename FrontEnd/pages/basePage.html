@@ -1,21 +1,71 @@
-<!doctype html>
+<!doctype HTML>
 <html lang="it">
-<head>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, shrink-to-fit=no, user-scalable=yes, initial-scale=1.0, maximum-scale=4.0, minimum-scale=0.5" />
-<title>PSP</title>
-</head>
-
-<body>
-    <div class= "body">
-    {% block bodyOfPage%}
-    {% endblock bodyOfPage%}
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, user-scalable=yes, initial-scale=1.0, maximum-scale=4.0, minimum-scale=0.5" />
+    <link rel="stylesheet" href="{{url_for('static', path='css/style.css')}}">
+    <title>PSP</title>
+    {% block links %}
+    {% endblock links %}
+  </head>
+  <body>
+    <div class="p-3 mb-2 bg-dark text-white" >
+    <div id="NAV" class="container text-center" >
+      <div class="container text-center">
+        <div class="row align-items-start">
+          <div class="col-1">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="./">PSP</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+          </div>
+          <div class="col-6">
+            <div class="col-100">
+              <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                      <a class="nav-link active" aria-current="page" href="./login">Login</a>
+                      <a class="nav-link" href="#">Register</a>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <footerclass="blockquote-footer">
-      <p>Gruppo PSP</p>
-      <p>Front-end: Gargiulo Antonio Pio, Longobardi Francesco, Longobardi Lorenzo</p>
-      <p>Back-end: Longobardi Davide Nino, Stefanile Andrea</p>
-    </footer>
-</body>
+      </div>
+    </div>
+
+    <!-- QUI DOVETE INFILARMI LA NAVBAR CHE HA LOGO, LOGIN, REGISTER -->
+
+    <div class= "body">
+      {% block bodyOfPage%}
+      {% endblock bodyOfPage%}    
+    </div>
+
+    <!-- QUI DOVETE RENDERLO CARINO -->
+    <footer id="FOOOOOTER">
+      <div class="p-3 mb-2 bg-dark text-white" >
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <p>Gruppo PSP</p>
+            <p>Front-end: Gargiulo Antonio Pio, Longobardi Francesco, Longobardi Lorenzo</p>
+            <p>Back-end: Longobardi Davide Nino, Stefanile Andrea</p>
+          </div>
+        </div>
+      </div>
+          </footer>
+
+
+  </body>
 </html>
