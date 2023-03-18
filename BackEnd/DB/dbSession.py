@@ -266,7 +266,7 @@ class Entries(SQLModel, table = True):
     IdIng : Optional[int] = Field(default=None, primary_key = True)
     DataIn : datetime
     DataOut : Optional[datetime]
-    IdAccount : Optional[int] = Field(default=None, foreign_key="People.idPeople")
+    IdAccount : int = Field(default=None, foreign_key="People.idPeople")
 
     def __init__(self, IdIng, DataIn, DataOut, IdAccount):
         self.IdIng = IdIng
