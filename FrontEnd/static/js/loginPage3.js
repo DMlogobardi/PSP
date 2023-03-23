@@ -10,7 +10,7 @@ const control = async () => {
 
 
 const verify = async (nickname,password) => {
-    const data = await fetch(`./api`, {
+    const data = await fetch(`./api/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
