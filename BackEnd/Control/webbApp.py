@@ -68,6 +68,7 @@ async def login(acc:Account):
 			if account.getPass() == acc.getPass():
 				return{
 					'message':'log',
+					'userId' : account.IdAccount,
 					'success': True
 				}
 			else:
