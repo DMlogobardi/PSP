@@ -49,7 +49,7 @@ async def root(req: Request):
 		}
 	)
 
-@webApp.post('/api')
+@webApp.post('/api/login')
 async def login(acc:Account):
 	try: 
 		quary = db_A.getLog(nick=acc.getNick().strip())
