@@ -62,11 +62,18 @@ async def login(acc:Account):
 			}
 		else:
 			if account.getPass() == acc.getPass():
-				return{
-					'message':'log',
-					'userId' : account.IdAccount,
-					'success': True
-				}
+				if account.DataExp != None:
+					return{
+						'message':'log',
+						'userId' : account.getIdAccount(),
+						'success': True
+					}
+				else:
+					return{
+						'message':'Inactive account',
+						'DataExp': account.getDataExp(),
+						'success': False
+					}
 			else:
 				return{
 					'message':'wrong password',
