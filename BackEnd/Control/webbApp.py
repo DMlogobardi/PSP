@@ -45,7 +45,7 @@ async def root(req: Request):
 		}
 	)
 
-@webApp.get('/register', response_class = HTMLResponse)
+@webApp.get('/register1', response_class = HTMLResponse)
 async def root(req: Request):
 	return templates.TemplateResponse(
 		'registerPart1.html',
