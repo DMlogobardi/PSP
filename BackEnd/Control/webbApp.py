@@ -111,7 +111,7 @@ async def login(acc:db.Account):
 	except Exception as e:
 		print(e)
 
-@webApp.post('/api/reg1')
+@webApp.post('/api/reg1/student')
 async def reg(classm:db.Classm, person:db.People, acc:db.Account):
 	classe = db_C.getClassm(year=classm.Year, carrel=classm.Carrel)
 	if classe == None:
