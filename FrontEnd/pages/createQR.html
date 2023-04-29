@@ -1,0 +1,15 @@
+{# createQR.html #}
+{% extends 'basePage.html' %}
+
+{% block links %}
+<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+<script src="{{url_for('static', path='js/createQr.js')}}"></script>
+<link rel="stylesheet" href="{{url_for('static', path='css/style.css')}}">
+{% endblock links %}
+
+{% block bodyOfPage %}
+<div id="qrbutton">
+    <button type="button" onclick="createQR()"> CREA QR</button>
+</div>
+<div id="qrcode"></div>
+{% endblock bodyOfPage %}
