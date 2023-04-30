@@ -1,10 +1,10 @@
 'use strict';
 let nQr =0;
 
-const loadItems = async (url) =>{ await fetch(url)
+const loadItems = async (url) => await fetch(url)
     .then(res => res.json())
     .catch(e => console.error(e));
-}
+
 
 const createQR = async () => {
     if (nQr===0) {
