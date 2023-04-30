@@ -1,9 +1,9 @@
 'use strict';
 
-const loadItems = async (url) =>{ await fetch(url)
+const loadItems = async (url) => await fetch(url)
 		.then(res => res.json())
 		.catch(e => console.error(e));
-}
+
 
 const switchRole = async (ruolo) => {
 	let container = document.getElementById("classOrSub");
