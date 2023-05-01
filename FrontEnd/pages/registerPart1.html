@@ -1,0 +1,125 @@
+{# createQR.html #}
+{% extends 'basePage.html' %}
+
+{% block links %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/sha256.js"></script>
+<script src="{{url_for('static', path='js/registerPart1v6.js')}}"></script>
+<link rel="stylesheet" href="{{url_for('static', path='css/style.css')}}">
+{% endblock links %}
+
+{% block bodyOfPage %}
+<div class="container">
+	
+	<div class="card border-dark mb-3">
+		<div class="card-body">
+			<div class="row justify-content-center">
+				<div class="card text-bg-dark mb-3">
+					<h2>
+						Register
+					</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row justify-content-center">
+		<div class="media-container-column col-lg-8" data-form-type="formoid">
+        <form>
+            <div id="blocco1">
+                <div class="mb-3" >
+                    <h4>
+                        <label for="nomeInput" class="form-label " >Nome</label>
+                    </h4>
+                    <input type="text" class="form-control" id="nomeInput" placeholder="Insert Name" required>
+                </div>
+
+                <div class="mb-3">
+                    <h4>
+                        <label for="cognomeInput" class="form-label " >Cognome</label>
+                    </h4>
+                    <input type="text" class="form-control" id="cognomeInput" placeholder="Insert Surname" required>
+                </div>
+                
+                <div class="mb-3">
+                    <h4>
+                        <label for="cfInput" class="form-label " >CF</label>
+                    </h4>
+                    <input type="text" class="form-control" maxlength="16" id="cfInput" placeholder="Insert CF" required>
+                </div>
+
+                <div class="mb-3">
+                    <div class="sceltaGenere">
+                        <h4>
+                            <label for="sceltaGenere" >Sesso</label><br>
+                        </h4>
+                        <input type="radio" id="Uomo" name="gender" value="M" checked>
+                        <label for="Uomo">Uomo</label><br>
+                        <input type="radio" id="Donna" name="gender" value="F">
+                        <label for="Donna">Donna</label><br>
+                    </div>
+                </div>
+
+                <div id="campoData">
+                    
+                </div>
+                <div class="mb-3">
+                    <h4>
+                        <label for="dateInput" class="form-label " >Data di nascita</label>
+                    </h4>
+                    <input type="date" class="form-control" id="dateInput" onload="setMaxDate()" required>
+                </div>
+
+                <div class="mb-3">
+                    <h4>
+                        <label for="emailInput" class="form-label " >Email</label>
+                    </h4>
+                    <input type="email" class="form-control" id="emailInput" placeholder="Insert email" required>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="switchDiv(`blocco1`,`blocco2`)">AVANTI</button>
+            </div>
+
+            <div id="blocco2" style="display: none;">
+                <div class="mb-3" >
+                    <div class="sceltaRuolo">
+                        <h4>
+                            <label for="sceltaGenere" >Ruolo</label><br>
+                        </h4>
+                        <input type="radio" id="doc" name="ruolo" value="docente" onclick="switchRole('doc')" checked>
+                        <label for="doc">Docente</label><br>
+                        <input type="radio" id="stud" name="ruolo" value="studente" onclick="switchRole('stud')">
+                        <label for="stud">Studente</label><br>
+                        <input type="radio" id="ata" name="ruolo" value="ata" onclick="switchRole('ata')">
+                        <label for="ata">Personale ata</label><br>
+                    </div>
+                </div>
+
+                <div class="mb-3" id="classOrSub" >
+                    <h4>
+                        <label for="subInput" class="form-label" >Materia</label>
+                    </h4>
+                    <input type="text" class="form-control" id="subInput"  placeholder="Insert subject" required>
+                </div>
+                
+                <div class="mb-3">
+                    <h4>
+                        <label for="InputNickname" class="form-label " >Nickname</label>
+                    </h4>
+                    <input type="text" class="form-control" id="nicknameInput" aria-describedby="NicknameHelp"  placeholder="Insert Nickname" required>
+                </div>
+                <div class="mb-3">
+                    <h4>
+                        <label for="InputPassword" class="form-label " >Password</label>
+                    </h4>
+                    <input type="password" class="form-control" id="passwordInput" required>
+                    <input type="checkbox" id="showPwdItem" onclick="showPwd()">
+                    <label for="showPwdItem">Show Password</label>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="switchDiv(`blocco2`,`blocco1`);">INDIETRO</button>
+                <button type="button" class="btn btn-primary" onclick="control();">INVIA</button>
+            </div>    
+        </form>
+    </div>
+</div>
+</div>
+
+{% endblock bodyOfPage %}
