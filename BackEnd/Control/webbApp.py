@@ -75,6 +75,15 @@ async def root(req: Request):
 		}
 	)
 
+@webApp.get('/admin', response_class = HTMLResponse)
+async def root(req: Request):
+	return templates.TemplateResponse(
+		'admin.html',
+		{
+			'request': req,
+		}
+	)
+
 @webApp.get('/api/gk/{id}')
 async def gk(id:int):
 	gk = db_A.getAccountGK(id)
