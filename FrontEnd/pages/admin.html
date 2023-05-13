@@ -1,0 +1,39 @@
+{# login.html #}
+{% extends 'basePage.html' %}
+
+{% block links %}
+<script src="{{url_for('static', path='js/adminV2.js')}}"></script>
+<link rel="stylesheet" href="{{url_for('static', path='css/styleAdminV2.css')}}">
+{% endblock links %}
+
+
+{% block bodyOfPage %}
+
+
+<div class="container">
+    <div class="card border-dark mb-3">
+		<div class="card-body">
+			<div class="row justify-content-center">
+				<div class="card text-bg-dark mb-3" style="text-align: center;">
+					<h2>
+						Gestione Admin
+					</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+    <div>
+        <div class="tab" style="float:left;width:25%;">
+            <button type="button" class="tablinks" onclick="tabella('People');">Persone</button>
+            <button type="button" class="tablinks" onclick="tabella('Classm');">Classi</button>
+            <button type="button" class="tablinks" onclick="tabella('Phones');">Telefoni</button>
+            <button type="button" class="tablinks" onclick="tabella('Vehicles');">Veicoli</button>
+            <button type="button" class="tablinks" onclick="tabella('Account');">Account</button>
+            <button type="button" class="tablinks" onclick="tabella('approvedAccount');">Account da approvare</button>
+        </div>
+        
+        <div id="divTabellone" class="tabcontent" style="float: right; padding-left: 20px; width: 75%;">
+        </div>    
+    </div>
+</div>
+{% endblock bodyOfPage %}
