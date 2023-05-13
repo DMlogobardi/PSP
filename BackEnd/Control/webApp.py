@@ -180,7 +180,7 @@ async def login(acc:db.Account):
 					}
 				else:
 					return{
-						'message':'account not acctivate',
+						'message':'account not activate',
 						'success': False
 					}
 			else:
