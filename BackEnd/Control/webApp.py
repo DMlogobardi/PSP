@@ -125,7 +125,7 @@ async def gk(id:int):
 	else:
 		return{
 			'message':'riding gk',
-			'gk': hashlib.sha256(gk.__str__().encode()).hexdigest() 
+			'gk': hashlib.sha1(gk.__str__().encode()).hexdigest() 
 		}
 
 @webApp.get('/class')
