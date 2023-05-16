@@ -112,6 +112,15 @@ async def root(req: Request):
 		}
 	)
 
+@webApp.get('/chisiamo', response_class = HTMLResponse)
+async def root(req: Request):
+	return templates.TemplateResponse(
+		'chisiamo.html',
+		{
+			'request': req,
+		}
+	)
+
 @webApp.get('/api/gk/{id}')
 async def gk(id:int):
 	gk = db_A.getAccountGK(id)
