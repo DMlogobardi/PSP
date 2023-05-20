@@ -97,7 +97,7 @@ async def root(req: Request):
 @webApp.get('/admin', response_class = HTMLResponse)
 async def root(req: Request):
 	return templates.TemplateResponse(
-		'admin.html',
+		'adminV2.html',
 		{
 			'request': req,
 		}
