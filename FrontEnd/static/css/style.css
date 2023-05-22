@@ -1,0 +1,23 @@
+#NAV{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#qrcode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#qrbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divAdminDoppio{
+    display: flex;
+  flex-wrap: wrap;
+  /* for horizontal aligning of child divs */
+  justify-content: center;
+}
