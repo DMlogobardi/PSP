@@ -87,7 +87,7 @@ async def root(req: Request):
 @webApp.get('/qr', response_class = HTMLResponse)
 async def root(req: Request):
 	return templates.TemplateResponse(
-		'createQR.html',
+		'profile.html',
 		{
 			'request': req,
 		}
