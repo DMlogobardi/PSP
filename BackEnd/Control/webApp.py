@@ -48,15 +48,6 @@ async def root(req: Request, exc):
 		}
 	)
 
-@webApp.exception_handler(502)
-async def root(req: Request, exc):
-	return templates.TemplateResponse(
-		'index.html',
-		{
-			'request': req,
-		}
-	)
-
 @webApp.get('/login', response_class = HTMLResponse)
 async def root(req: Request):
 	return templates.TemplateResponse(
