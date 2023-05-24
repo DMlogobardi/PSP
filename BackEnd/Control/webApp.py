@@ -588,3 +588,24 @@ async def read(object: str, data: Any = Body()):
 		
 	except Exception as e:
 		return HTTPException(status_code=502, detail=f"Bad Gatway")
+	
+@webApp.put('/api/validate')
+async def read(listId: list[int]):
+	listException = []
+	for id in listId:
+		acc =db_A.getAccountByIdPeople(id)
+		if acc != None and acc.__class__ != Exception() and acc != -1:
+			if acc.valid == "F":
+				acc.valid = "T"
+				db_A.updateAccount(id= acc.idAccount, acc= acc)
+			else:
+				listException.append(HTTPException(status_code=404, detail=f"{id}: is valid"))
+		else:
+			listException.append(HTTPException(status_code=502, detail=f"{id}: Bad Gatway"))
+	
+	if len(listException) == 0:
+		return{
+			'message': 'validate all list'
+		}
+	else:
+		return listException
