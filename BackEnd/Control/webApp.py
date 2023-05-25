@@ -93,15 +93,6 @@ async def root(req: Request):
 		}
 	)
 
-@webApp.get('/chisiamo', response_class = HTMLResponse)
-async def root(req: Request):
-	return templates.TemplateResponse(
-		'chisiamo.html',
-		{
-			'request': req,
-		}
-	)
-
 @webApp.get('/api/gk/{id}')
 async def gk(id:int):
 	gk = db_A.getAccountGK(id)
@@ -593,7 +584,7 @@ async def read(object: str, data: Any = Body()):
 async def read(listId: list[int]):
 	listException = []
 	for id in listId:
-		acc =db_A.getAccountByIdPeople(id)
+		acc =db_A.getAccountById(id)
 		if acc != None and acc.__class__ != Exception() and acc != -1:
 			if acc.valid == "F":
 				acc.valid = "T"
