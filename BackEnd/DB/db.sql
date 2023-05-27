@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS People(
     gender CHAR(1) NOT NULL DEFAULT 'm',
     email VARCHAR(100) UNIQUE NOT NULL,
     birthday DATE NOT NULL,
-    sub VARCHAR(24),
+    sub VARCHAR(50),
     idClass INT REFERENCES Classm(IdClass)
 );
 
