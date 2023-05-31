@@ -93,6 +93,15 @@ async def root(req: Request):
 		}
 	)
 
+@webApp.get('/recoverPassword', response_class = HTMLResponse)
+async def root(req: Request):
+	return templates.TemplateResponse(
+		'password.html',
+		{
+			'request': req,
+		}
+	)
+
 @webApp.get('/api/gk/{id}')
 async def gk(id:int):
 	gk = db_A.getAccountGK(id)
@@ -600,3 +609,16 @@ async def read(listId: list[int]):
 		}
 	else:
 		return listException
+
+@webApp.put('/api/validate/{id}')
+async def read(id:int, passw = str):
+
+	acc =db_A.getAccountById(id)
+	if acc != None and acc.__class__ != Exception() and acc != -1:
+		if len(passw) == 64:
+			acc.p_ass = passw
+			db_A.updateAccount(id= acc.idAccount, acc= acc)
+		else:
+			HTTPException(status_code=404, detail=f"{id}: not crypt")
+	else:
+		return HTTPException(status_code=502, detail=f"{id}: Bad Gatway") 
