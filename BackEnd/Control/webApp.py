@@ -619,6 +619,6 @@ async def read(id:int, passw = str):
 			acc.p_ass = passw
 			db_A.updateAccount(id= acc.idAccount, acc= acc)
 		else:
-			HTTPException(status_code=404, detail=f"{id}: not crypt")
+		    return HTTPException(status_code=404, detail=f"{id}: not crypt")
 	else:
 		return HTTPException(status_code=502, detail=f"{id}: Bad Gatway") 
