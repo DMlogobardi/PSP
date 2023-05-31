@@ -610,7 +610,7 @@ async def read(listId: list[int]):
 	else:
 		return listException
 
-@webApp.put('/api/validate/{id}')
+@webApp.put('/api/updatePassword/{id}')
 async def read(id:int, passw = str):
 
 	acc =db_A.getAccountById(id)
