@@ -613,7 +613,7 @@ async def read(listId: list[int]):
 	except Exception as e:
 		raise HTTPException(status_code=502, detail=f"Bad Gatway")
 
-@webApp.put('/api/updatePassword/{nick}')
+@webApp.put('/api/forgotPassword/{nick}')
 async def read(nick: str, passw: dict = Body()):
 	try:
 		if nick.strip().lower() != "admin" and len(passw['passw']) == 64:
