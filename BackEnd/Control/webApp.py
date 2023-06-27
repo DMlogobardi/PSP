@@ -613,29 +613,21 @@ async def read(listId: list[int]):
 	except Exception as e:
 		raise HTTPException(status_code=502, detail=f"Bad Gatway")
 
-@webApp.put('/api/getAttribute')
-async def read(data: Any = Body()):
+@webApp.put('/api/updatePassword/{nick}')
+async def read(nick: str, passw: dict = Body()):
 	try:
-		att = o_Q.giveAttribute(data)
-		if att != None and att.__class__ != Exception:
-			raise att
-		else:
-			raise HTTPException(status_code=404, detail="not found")
-	except Exception as e:
-		 raise HTTPException(status_code=502, detail=f"Bad Gatway")
-
-@webApp.put('/api/updatePassword/{id}')
-async def read(id:int, passw = str):
-	try:
-		acc =db_A.getAccountById(id)
-		if acc != None and acc.__class__ != Exception() and acc != -1:
-			if len(passw) == 64:
-				acc.p_ass = passw
-				db_A.updateAccount(id= acc.idAccount, acc= acc)
+		if nick.strip().lower() != "admin" and len(passw['passw']) == 64:
+			acc =db_A.getLog(nick)
+			if acc != None and acc.__class__ != Exception() and acc != -1:
+					if acc.valid != "O" or acc.dataExp != None:
+						raise HTTPException(status_code=402, detail=f"{acc.idAccount}: Is invalid account")
+					acc.p_ass = passw["passw"]
+					if db_A.updateAccount(id= acc.idAccount, acc= acc) != None:
+						return True
+					return False
 			else:
-				raise HTTPException(status_code=404, detail=f"{id}: not crypt")
-		else:
-			raise HTTPException(status_code=502, detail=f"{id}: Bad Gatway")
-		
+				raise HTTPException(status_code=502, detail=f"Bad Gatway")
+		return False
+
 	except Exception as e:
-		 raise HTTPException(status_code=502, detail=f"Bad Gatway")
+		raise e
