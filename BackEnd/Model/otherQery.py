@@ -22,19 +22,3 @@ def testReadJoin(data_payload: Any):
 		
 	except Exception as e:
 		return e
-	
-def giveAttribute(data_payload: Any):
-    try:
-        with db.session() as s:
-            data_json = json.dumps(data_payload)
-            data_filter = json.loads(data_json)
-
-            if data_filter:
-                query = select(getattr(getattr(db, data_filter["table"]), data_filter["field"])).where(text(data_filter["fil"]))
-
-            r = s.exec(query)
-
-            return r.one_or_none()
-            
-    except Exception as e:
-        return e
