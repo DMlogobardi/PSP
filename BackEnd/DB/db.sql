@@ -25,77 +25,70 @@ CREATE TABLE IF NOT EXISTS Classm(
     active VARCHAR(3) DEFAULT "YES" NOT NULL
 );
 
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'A', '1', 'Elettronica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'A', '2', 'Elettronica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'A', '3', 'Elettronica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'A', '4', 'Elettronica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'A', '5', 'Elettronica', 'YES');
+INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES 
+(NULL, 'A', '1', 'Elettronica', 'YES'),
+(NULL, 'A', '2', 'Elettronica', 'YES'),
+(NULL, 'A', '3', 'Elettronica', 'YES'),
+(NULL, 'A', '4', 'Elettronica', 'YES'),
+(NULL, 'A', '5', 'Elettronica', 'YES'),
+(NULL, 'B', '1', 'Elettronica', 'YES'),
+(NULL, 'B', '2', 'Elettronica', 'YES'),
+(NULL, 'B', '3', 'Elettronica', 'YES'),
+(NULL, 'B', '4', 'Elettronica', 'YES'),
+(NULL, 'B', '5', 'Elettronica', 'YES'),
+(NULL, 'C','1', 'Elettronica', 'YES'),
+(NULL, 'C','2', 'Elettronica', 'YES'),
+(NULL, 'C','3', 'Elettronica', 'YES'),
+(NULL, 'C', '4', 'Elettronica', 'NO'),
+(NULL, 'C','5', 'Elettronica', 'YES'),
+(NULL, 'D', '1', 'informatica', 'YES'),
+(NULL, 'D', '2', 'informatica', 'YES'),
+(NULL, 'D', '3', 'informatica', 'YES'),
+(NULL, 'D', '4', 'informatica', 'YES'),
+(NULL, 'D', '5', 'informatica', 'YES'),
+(NULL, 'E', '1', 'informatica', 'YES'),
+(NULL, 'E', '2', 'informatica', 'YES'),
+(NULL, 'E', '3', 'informatica', 'YES'),
+(NULL, 'E', '4', 'informatica', 'YES'),
+(NULL, 'E', '5', 'informatica', 'YES'),
+(NULL, 'F', '1', 'informatica', 'YES'),
+(NULL, 'F', '2', 'informatica', 'YES'),
+(NULL, 'F', '3', 'informatica', 'NO'),
+(NULL, 'F', '4', 'informatica', 'YES'),
+(NULL, 'F', '5', 'informatica', 'YES'),
+(NULL, 'G', '1', 'Telecomunicazioni', 'YES'),
+(NULL, 'G', '2', 'Telecomunicazioni', 'YES'),
+(NULL, 'G', '3', 'Telecomunicazioni', 'YES'),
+(NULL, 'G', '4', 'Telecomunicazioni', 'YES'),
+(NULL, 'G', '5', 'Telecomunicazioni', 'YES'),
+(NULL, 'H', '1', 'Meccanica', 'YES'),
+(NULL, 'H', '2', 'Meccanica', 'YES'),
+(NULL, 'H', '3', 'Meccanica', 'YES'),
+(NULL, 'H', '4', 'Meccanica', 'YES'),
+(NULL, 'H', '5', 'Meccanica', 'YES'),
+(NULL, 'I', '1', 'Meccanica', 'YES'),
+(NULL, 'I', '2', 'Meccanica', 'YES'),
+(NULL, 'I', '3', 'Meccanica', 'YES'),
+(NULL, 'I', '4', 'Meccanica', 'YES'),
+(NULL, 'I', '5', 'Meccanica', 'YES'),
+(NULL, 'L', '1', 'Grafica', 'YES'),
+(NULL, 'L', '2', 'Grafica', 'YES'),
+(NULL, 'L', '3', 'Grafica', 'YES'),
+(NULL, 'L', '4', 'Grafica', 'NO'),
+(NULL, 'L', '5', 'Grafica', 'NO'),
+(NULL, 'M', '1', 'Meccanica', 'NO'),
+(NULL, 'M', '2', 'Meccanica', 'YES'),
+(NULL, 'M', '3', 'Meccanica', 'YES'),
+(NULL, 'M', '4', 'Meccanica', 'YES'),
+(NULL, 'M', '5', 'Meccanica', 'YES'),
+(NULL, 'N', '1', 'Elettronica', 'YES'),
+(NULL, 'N', '2', 'Elettronica', 'YES'),
+(NULL, 'N', '3', 'Elettronica', 'YES'),
+(NULL, 'N', '4', 'Elettronica', 'NO'),
+(NULL, 'N', '5', 'Elettronica', 'NO');
 
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'B', '1', 'Elettronica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'B', '2', 'Elettronica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'B', '3', 'Elettronica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'B', '4', 'Elettronica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'B', '5', 'Elettronica', 'YES');
 
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'C','1', 'Elettronica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'C','2', 'Elettronica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'C','3', 'Elettronica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'C', '4', 'Elettronica', 'NO');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'C','5', 'Elettronica', 'YES');
 
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'D', '1', 'informatica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'D', '2', 'informatica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'D', '3', 'informatica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'D', '4', 'informatica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'D', '5', 'informatica', 'YES');
-
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'E', '1', 'informatica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'E', '2', 'informatica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'E', '3', 'informatica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'E', '4', 'informatica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'E', '5', 'informatica', 'YES');
-
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'F', '1', 'informatica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'F', '2', 'informatica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'F', '3', 'informatica', 'NO');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'F', '4', 'informatica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'F', '5', 'informatica', 'YES');
-
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'G', '1', 'Telecomunicazioni', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'G', '2', 'Telecomunicazioni', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'G', '3', 'Telecomunicazioni', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'G', '4', 'Telecomunicazioni', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'G', '5', 'Telecomunicazioni', 'YES');
-
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'H', '1', 'Meccanica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'H', '2', 'Meccanica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'H', '3', 'Meccanica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'H', '4', 'Meccanica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'H', '5', 'Meccanica', 'YES');
-
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'I', '1', 'Meccanica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'I', '2', 'Meccanica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'I', '3', 'Meccanica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'I', '4', 'Meccanica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'I', '5', 'Meccanica', 'YES');
-
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'L', '1', 'Grafica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'L', '2', 'Grafica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'L', '3', 'Grafica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'L', '4', 'Grafica', 'NO');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'L', '5', 'Grafica', 'NO');
-
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'M', '1', 'Meccanica', 'NO');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'M', '2', 'Meccanica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'M', '3', 'Meccanica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'M', '4', 'Meccanica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'M', '5', 'Meccanica', 'YES');
-
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'N', '1', 'Elettronica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'N', '2', 'Elettronica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'N', '3', 'Elettronica', 'YES');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'N', '4', 'Elettronica', 'NO');
-INSERT INTO `classm` (`idClass`, `carrel`, `year`, `articulation`, `active`) VALUES (NULL, 'N', '5', 'Elettronica', 'NO');
 
 DROP TABLE IF EXISTS Phones;
 CREATE TABLE IF NOT EXISTS Phones(
