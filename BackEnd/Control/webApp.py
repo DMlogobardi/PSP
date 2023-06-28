@@ -619,7 +619,7 @@ async def read(nick: str, passw: dict = Body()):
 		if nick.strip().lower() != "admin" and len(passw['passw']) == 64:
 			acc =db_A.getLog(nick)
 			if acc != None and acc.__class__ != Exception() and acc != -1:
-					if acc.valid != "O" or acc.dataExp != None:
+					if acc.valid != "F" or acc.dataExp != None:
 						raise HTTPException(status_code=402, detail=f"{acc.idAccount}: Is invalid account")
 					acc.p_ass = passw["passw"]
 					if db_A.updateAccount(id= acc.idAccount, acc= acc) != None:
