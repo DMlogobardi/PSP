@@ -42,7 +42,7 @@ async def root(req: Request):
 @webApp.exception_handler(404)
 async def root(req: Request, exc):
 	return templates.TemplateResponse(
-		'index.html',
+		'error404.html',
 		{
 			'request': req,
 		}
