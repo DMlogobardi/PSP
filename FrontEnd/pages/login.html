@@ -1,0 +1,55 @@
+{# login.html #}
+{% extends 'basePage.html' %}
+
+{% block links %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/sha256.js"></script>
+<script src="{{url_for('static', path='js/loginPageV5.js')}}"></script>
+<link rel="stylesheet" href="{{url_for('static', path='css/style.css')}}">
+{% endblock links %}
+
+{% block bodyOfPage %}
+<div class="container">
+	
+	<div class="card border-dark mb-3">
+		<div class="card-body">
+			<div class="row justify-content-center">
+				<div class="card text-bg-dark mb-3" style="text-align: center;">
+					<h2>
+						Login
+					</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row justify-content-center">
+		<div class="media-container-column col-lg-8" data-form-type="formoid">
+			<form>
+				<div class="mb-3">
+					<h4>
+						<label for="InputNickname" class="form-label" >Nickname</label>
+					
+					</h4>
+					<input type="Nickname" class="form-control" id="nicknameInput" aria-describedby="NicknameHelp"  placeholder="Insert Nickname" required>
+				</div>
+				<div class="mb-3">
+					<h4>
+						<label for="InputPassword" class="form-label" >Password</label>
+					</h4>
+					<input type="password" class="form-control" id="passwordInput" required>
+					<input type="checkbox" id="showPwdItem" onclick="showPwd()">
+                    <label for="showPwdItem">Show Password</label>
+					<span style="display: inline-block; width: 2ch;">&#9;</span>
+					<br>
+					<br>
+					<div style="text-align: center;">
+						<a class="navbar-brand" href="./recoverPassword" >Recupera password</a><br><br>
+						<button type="button" class="btn btn-primary" onclick="control();">INVIA</button>
+					</div>
+				</div>
+				
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock bodyOfPage %}

@@ -1,0 +1,66 @@
+{# profile.html #}
+{% extends 'basePage.html' %}
+
+{% block links %}
+<script src="{{url_for('static', path='js/profileV8.js')}}"></script>
+<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+<script src="{{url_for('static', path='js/createQrV4.js')}}"></script>
+<link rel="stylesheet" href="{{url_for('static', path='css/style.css')}}">
+
+{% endblock links %}
+
+{% block bodyOfPage %}
+<div class="container ">
+	
+	<div class="card border-0 mb-3">
+		<div class="card-body border-0">
+			<div class="row justify-content-center">
+				<div class="card border-0 mb-3" style="text-align: center;">
+					<h2>
+						Profile
+					</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="d-flex justify-content-center">
+        <div class="btn-group  ">
+            <button type="button" class="btn btn-sm btn-primary" onclick="card('Person');" style="margin-right: 0px; ">Dati personali</button>
+        </div>
+        <div class="btn-group  ">
+            <button type="button" class="btn btn-sm  btn-primary" onclick="card('Phone');" style="margin-right: 0px;">Telefoni</button>
+        </div>
+
+        <div class="btn-group" >
+            <button type="button" class="btn btn-sm  btn-primary" onclick="card('Vehicle');" style="margin-right: 0px;">Veicoli</button>
+        </div>
+
+        <div class="btn-group  ">
+            <button type="button" class="btn btn-sm  btn-primary" onclick="card('Account');" style="margin-right: 0px;">Account</button>
+        </div> 
+    </div>
+
+    <div style="height: 10px;"></div>
+	
+	<div class="d-flex aligns-items-center justify-content-center card text-center w-100 mx-auto" >
+		<div class="card text-bg-light justify-content-center mb-3" style="width: 18rem; position: relative;align-self: center;">
+			<div class="card-header" id="titolo">
+			</div>
+			<ul id="carta" class="list-group list-group-flush text-bg-light border-dark" >
+				
+			</ul>
+		</div>  
+	</div>
+
+
+	<div id="qrbutton" class=" btn-group justify-content-center">
+		<button type="button" class="btn btn-sm btn-primary" onclick="createQR()" >Crea QR</button>
+	</div>
+	<div style="height: 10px;"></div>
+	<div id="qrcode"></div>
+	<div style="height: 10px;"></div>
+</div>
+
+
+{% endblock bodyOfPage %}
