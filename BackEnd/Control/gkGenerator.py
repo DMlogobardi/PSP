@@ -4,6 +4,7 @@ import secrets
 sys.path.append('./BackEnd/Model/')
 import accountDAO as db_A
 
+#mmmm
 def gkGenerator():
     #prende la lista di gk di ogni utente
     listGK = db_A.getAllAccountGK()
