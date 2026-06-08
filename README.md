@@ -1,5 +1,5 @@
 # PSP
-This is project from students of ITI Renato Elia 5F,5E
+IoT access control system based on QR Code validation, Raspberry Pi integration and FastAPI backend.
 
 
 Necessary python libraries:
